@@ -4,22 +4,14 @@ APM package for installing the `agents-md` skill, which helps agents create, ref
 
 ## Install
 
-From the project where you want to use the skill, install this repository with APM:
-
 ```bash
-apm install https://github.com/g0g5/agents-md-skill.git --target opencode
-```
-
-GitHub shorthand also works:
-
-```bash
-apm install g0g5/agents-md-skill --target opencode
+apm install g0g5/agents-md-skill --target opencode --global
 ```
 
 For OpenCode and other cross-client targets, APM deploys the skill to:
 
 ```text
-.agents/skills/agents-md/
+~/.agents/skills/agents-md/
 ```
 
 ## Expected Behavior
