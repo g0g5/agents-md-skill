@@ -37,26 +37,27 @@ Rules:
 - Exclude generated, cache, and deeply internal tooling unless core to the project.
 
 ## Working Guide
-[How to perform the most common tasks for this project: editing, reviewing, validating, deploying, etc.]
+[Leave blank by default. Only fill this when an existing `AGENTS.md` explicitly documents higher-level project workflows or operation sets. Use it for working guidance, not a command inventory.]
 
-Example:
+Example shape, only when explicitly present in an existing `AGENTS.md`:
 
 ```
-# Validate internal links
-./scripts/validate-links.sh
+### Content Update Flow
+- Update the relevant source content and any linked assets together.
+- Review downstream references before publishing.
+- Use the documented validation or publishing step from the existing guide.
 
-# Preview docs locally
-npx vitepress dev docs
-
-# Build for production
-npx vitepress build docs
+### Publishing Flow
+- Prepare draft changes in the documented staging area.
+- Request the documented owner review.
+- Publish through the documented release path.
 ```
 
 Rules:
-- List only tasks an agent would perform in nearly every session.
-- Prefer verified commands from project scripts, workflow files, or existing docs.
-- Do not list every possible task.
-- If a common task has no discoverable command, say so briefly rather than inventing one.
+- Leave this section empty when creating a new `AGENTS.md` or when the existing `AGENTS.md` does not already spell out workflows.
+- Do not infer workflows from project structure, scripts, workflow files, documentation layout, or common project conventions.
+- Preserve or refresh explicit existing workflows only when they remain accurate for the current project.
+- If an explicit workflow includes commands, keep them only as supporting steps inside that workflow, not as a standalone command list.
 
 ## Notes
 [Free-form: anything important about the project that doesn't fit above — conventions, caveats, ownership, external references, environment quirks, etc.]

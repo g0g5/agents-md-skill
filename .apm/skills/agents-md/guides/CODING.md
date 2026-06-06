@@ -8,7 +8,8 @@ Ask one `@explore` agent to inspect the workspace and return a concise report co
 
 - WHAT: tech stack and a structure tree with one-line purpose per item.
 - WHY: project purpose and the role of each major component.
-- HOW: only the most universally needed commands: build, test, typecheck, and verify changes.
+- HOW `commands`: only the most universally needed commands: build, test, typecheck, and verify changes.
+- HOW `workflows`: higher-level development processes only when an existing `AGENTS.md` explicitly documents them; otherwise leave this empty.
 
 For the structure tree, instruct the `@explore` agent to:
 
@@ -18,7 +19,7 @@ For the structure tree, instruct the `@explore` agent to:
 - Omit leaf implementation files and repetitive sibling files that are mostly interchangeable or isolated variants, unless one is the canonical entrypoint or shared base.
 - Exclude dot-prefixed internals and generated, build, cache, and vendor directories unless they are part of the core source layout.
 
-If an `AGENTS.md` already exists, also ask the `@explore` agent to compare it against the current workspace and call out structure, tech stack, or tooling differences that may make it stale.
+If an `AGENTS.md` already exists, also ask the `@explore` agent to compare it against the current workspace and call out structure, tech stack, tooling, or explicit development workflow differences that may make it stale.
 
 If the delegated inspection shows this is not primarily a software/code project, switch to `guides/GENERIC.md` and `templates/GENERIC.md` before writing.
 
@@ -26,7 +27,7 @@ If the delegated inspection shows this is not primarily a software/code project,
 
 Use `templates/CODING.md` as the canonical `AGENTS.md` template. Read it before writing or updating the file, then fill the sections with project-specific content from the delegated inspection.
 
-Focus on information agents need for ordinary coding tasks: purpose, structure, stack, and verification commands.
+Focus on information agents need for ordinary coding tasks: purpose, structure, stack, verification commands, and explicit existing development workflows when present.
 
 ## Quality Bar
 
@@ -38,4 +39,5 @@ Before finishing, check that the `AGENTS.md`:
 - Uses selective file inclusion for architectural files only.
 - Avoids generated, cache, vendor, and dot-prefixed internals unless core to the source layout.
 - Gives agents enough build/test/typecheck guidance to verify normal changes.
+- Keeps `Development Guide` split into `commands` and `workflows`, leaving `workflows` empty unless an existing `AGENTS.md` explicitly provided it.
 - Does not include secrets, local machine assumptions, or rarely used trivia.

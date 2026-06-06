@@ -48,6 +48,7 @@ Rules:
 - Use `- ...` or `- ...` to fold repetitive siblings.
 
 ## Development Guide
+### Commands
 [List only commands used in nearly every task. Prefer verified commands from package manifests, Makefiles, CI config, or repository docs.]
 
 Example:
@@ -73,6 +74,13 @@ Rules:
 - Include build, tests, typechecks, and verification commands only when they exist or are clearly supported.
 - Do not list every possible command — only those used in nearly every coding session.
 - If a common command is not discoverable, say so briefly rather than inventing one.
+
+### Workflows
+[Leave blank by default. Only fill this when an existing `AGENTS.md` explicitly documents development workflows. Use it for higher-level development processes, not extra command lists.]
+
+Rules:
+- Do not invent workflows from scripts, package names, or common project conventions.
+- Preserve or refresh explicit existing workflows only when they remain accurate for the current project.
 
 ## Notes
 [Free-form: anything important about the project that doesn't fit above — conventions, caveats, environment quirks, onboarding tips, external references, etc.]
