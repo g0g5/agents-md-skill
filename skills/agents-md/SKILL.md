@@ -12,8 +12,10 @@ Use this skill to create or update `AGENTS.md` in a project. The goal is a short
 
 - Create a TODO list before starting and keep it current.
 - Delegate workspace inspection to exactly one `@explore` agent. Do not inspect the workspace yourself before delegation.
+- Treat the user's instructions and any existing `AGENTS.md` content rules as higher priority than this skill's instructions. When they conflict, follow the user's instructions and existing rules.
 - Keep the final `AGENTS.md` concise and practical.
 - Prefer the smallest correct update when an `AGENTS.md` already exists.
+- Keep template section headings even when there is no suitable content to add. Write `[No content yet.]` as the section content in that case.
 
 ## Guide Selection
 

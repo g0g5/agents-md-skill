@@ -37,7 +37,7 @@ Rules:
 - Exclude generated, cache, and deeply internal tooling unless core to the project.
 
 ## Working Guide
-[Leave blank by default. Only fill this when an existing `AGENTS.md` explicitly documents higher-level project workflows or operation sets. Use it for working guidance, not a command inventory.]
+[No content yet.]
 
 Example shape, only when explicitly present in an existing `AGENTS.md`:
 
@@ -54,7 +54,8 @@ Example shape, only when explicitly present in an existing `AGENTS.md`:
 ```
 
 Rules:
-- Leave this section empty when creating a new `AGENTS.md` or when the existing `AGENTS.md` does not already spell out workflows.
+- Use `[No content yet.]` when creating a new `AGENTS.md` or when the existing `AGENTS.md` does not already spell out workflows.
+- Only fill this when an existing `AGENTS.md` explicitly documents higher-level project workflows or operation sets. Use it for working guidance, not a command inventory.
 - Do not infer workflows from project structure, scripts, workflow files, documentation layout, or common project conventions.
 - Preserve or refresh explicit existing workflows only when they remain accurate for the current project.
 - If an explicit workflow includes commands, keep them only as supporting steps inside that workflow, not as a standalone command list.

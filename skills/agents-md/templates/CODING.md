@@ -76,9 +76,10 @@ Rules:
 - If a common command is not discoverable, say so briefly rather than inventing one.
 
 ### Workflows
-[Leave blank by default. Only fill this when an existing `AGENTS.md` explicitly documents development workflows. Use it for higher-level development processes, not extra command lists.]
+[No content yet.]
 
 Rules:
+- Only fill this when an existing `AGENTS.md` explicitly documents development workflows. Use it for higher-level development processes, not extra command lists.
 - Do not invent workflows from scripts, package names, or common project conventions.
 - Preserve or refresh explicit existing workflows only when they remain accurate for the current project.
 

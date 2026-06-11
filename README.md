@@ -1,17 +1,26 @@
 # agents-md-skill
 
-APM package for installing the `agents-md` skill, which helps agents create, refresh, audit, fix, and maintain concise `AGENTS.md` project onboarding files.
+Repository for the `agents-md` skill, which helps agents create, refresh, audit, fix, and maintain concise `AGENTS.md` project onboarding files.
 
 ## Install
 
 ```bash
-apm install g0g5/agents-md-skill --target opencode --global
+git clone https://github.com/g0g5/agents-md-skill.git
+cd agents-md-skill
 ```
 
-For OpenCode and other cross-client targets, APM deploys the skill to:
+For Claude Code:
 
-```text
-~/.agents/skills/agents-md/
+```bash
+mkdir -p ~/.claude/skills/agents-md
+cp -R skills/agents-md/. ~/.claude/skills/agents-md/
+```
+
+For OpenCode and other clients:
+
+```bash
+mkdir -p ~/.agents/skills/agents-md
+cp -R skills/agents-md/. ~/.agents/skills/agents-md/
 ```
 
 ## Expected Behavior
@@ -29,25 +38,8 @@ When activated, it guides the agent to:
 
 The goal is to create an `AGENTS.md` that helps future coding agents understand the project quickly without adding broad, obvious, or rarely used details.
 
-## Package Layout
+## Repository Layout
 
-This repository uses APM's Multiple primitives layout:
-
-- `.apm/skills/agents-md/SKILL.md` - skill metadata and runtime workflow
-- `.apm/skills/agents-md/guides/` - coding and generic project guidance
-- `.apm/skills/agents-md/templates/` - canonical `AGENTS.md` templates
-- `apm.yml` - APM package metadata and publish include list
-
-## Preview And Pack
-
-Preview installation without writing files:
-
-```bash
-apm install https://github.com/g0g5/agents-md-skill.git --dry-run --target opencode
-```
-
-Preview the package contents:
-
-```bash
-apm pack --dry-run --verbose
-```
+- `skills/agents-md/SKILL.md` - skill metadata and runtime workflow
+- `skills/agents-md/guides/` - coding and generic project guidance
+- `skills/agents-md/templates/` - canonical `AGENTS.md` templates
