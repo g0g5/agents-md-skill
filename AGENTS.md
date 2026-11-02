@@ -1,5 +1,11 @@
 ## Overview
-This repository contains the `agents-md` skill, which helps OpenCode agents create, refresh, audit, fix, and maintain concise project `AGENTS.md` onboarding files.
+Repository for the `agents-md` Agent Skill, which guides agents to create, refresh, audit, and migrate concise `AGENTS.md` onboarding files.
+
+## Tech Stack
+- Language: Markdown skill instructions only
+- Runtime / Framework: Agent skill packages for Claude Code, OpenCode, and compatible clients
+- Key Dependencies: None
+- Package Manager: None
 
 ## Structural Map
 ```
@@ -7,28 +13,21 @@ agents-md-skill/
 |- README.md                         # Overview, manual install docs, and expected behavior
 `- skills/
    `- agents-md/
-      |- SKILL.md                    # Skill metadata and workflow for AGENTS.md creation/update tasks
+      |- SKILL.md                    # Skill metadata, workflow, and `.agents/` index rules
+      |- MIGRATION.md                # Legacy `AGENTS.md` detection, splitting, and reporting steps
       |- guides/
-      |  |- CODING.md                # Guide for software/code projects
-      |  `- GENERIC.md               # Guide for docs/config/non-code projects
+      |  |- CODING.md                # Inspection focus and quality bar for code projects
+      |  `- GENERIC.md               # Inspection focus and quality bar for non-code projects
       `- templates/
-         |- CODING.md                # Canonical AGENTS.md template for coding projects
-         `- GENERIC.md               # Canonical AGENTS.md template for generic projects
+         `- AGENTS.md                # Canonical AGENTS.md template for all projects
 ```
 
-## Working Guide
-```
-# Install for Claude Code after cloning
-mkdir -p ~/.claude/skills/agents-md
-cp -R skills/agents-md/. ~/.claude/skills/agents-md/
+## Commands
+No build, test, lint, typecheck, Makefile, or script-based validation commands are currently defined. Verify changes by reviewing the markdown files directly.
 
-# Install for OpenCode and other clients after cloning
-mkdir -p ~/.agents/skills/agents-md
-cp -R skills/agents-md/. ~/.agents/skills/agents-md/
-```
-
-No build, test, lint, typecheck, Makefile, or script-based validation commands are currently defined.
+## Workflows
+- [install.md](.agents/workflows/install.md) - Install a local copy of the skill for Claude Code, OpenCode, or other clients.
 
 ## Notes
-- Keep `SKILL.md`, guides, templates, and README behavior aligned when changing the skill workflow.
-- Generated AGENTS.md guidance in this package should stay concise, practical, and focused on project-specific onboarding details.
+- [generated-content-style.md](.agents/notes/generated-content-style.md) - Keep skill output and package guidance concise and project-specific.
+- [skill-alignment.md](.agents/notes/skill-alignment.md) - Keep SKILL.md, guides, template, and README behavior aligned.
